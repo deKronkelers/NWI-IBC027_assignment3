@@ -96,6 +96,32 @@ Initial state:
 		\path[->, thick] (G) edge [bend left] node [below] {?} (F);
 		\path[->, thick] (H) edge node [above] {?} (G);
 	\end{tikzpicture}
+
+	\item
+	\begin{tikzpicture}[c/.style={circle, draw}, visited/.style={fill=lightgray}]
+		\node [c, visited] (A) {A/1};
+		\node [c, visited, right=of A] (B) {B/2};
+		\node [c, visited, right=of B] (C) {C/3};
+		\node [c, below=of C] (D) {D/?};
+		\node [c, left =of D] (E) {E/?};
+		\node [c, below=of E] (G) {G/?};
+		\node [c, left =of G] (F) {F/?};
+		\node [c, right=of G] (H) {H/?};
+
+		\path[->, thick] (A) edge node [above] {T} (B);
+		\path[->, thick] (A) edge node [left ] {?} (F);
+		\path[->, thick] (B) edge node [above] {T} (C);
+		\path[->, thick] (B) edge node [left ] {?} (E);
+		\path[->, thick] (C) edge node [right] {?} (D);
+		\path[->, thick] (D) edge node [above] {?} (B);
+		\path[->, thick] (D) edge node [right] {?} (H);
+		\path[->, thick] (E) edge node [above] {?} (D);
+		\path[->, thick] (E) edge node [left ] {?} (G);
+		\path[->, thick] (F) edge node [above] {?} (E);
+		\path[->, thick] (F) edge [bend left] node [below] {?} (G);
+		\path[->, thick] (G) edge [bend left] node [below] {?} (F);
+		\path[->, thick] (H) edge node [above] {?} (G);
+	\end{tikzpicture}
 \end{enumerate}
 
 \section{} %2
