@@ -29,19 +29,19 @@ Initial state:
 	\node [c, left =of G] (F) {F/?};
 	\node [c, right=of G] (H) {H/?};
 
-	\path[->] (A) edge node [above] {?} (B);
-	\path[->] (A) edge node [left ] {?} (F);
-	\path[->] (B) edge node [above] {?} (C);
-	\path[->] (B) edge node [left ] {?} (E);
-	\path[->] (C) edge node [right] {?} (D);
-	\path[->] (D) edge node [above] {?} (B);
-	\path[->] (D) edge node [right] {?} (H);
-	\path[->] (E) edge node [above] {?} (D);
-	\path[->] (E) edge node [left ] {?} (G);
-	\path[->] (F) edge node [above] {?} (E);
-	\path[->] (F) edge [bend left] node [below] {?} (G);
-	\path[->] (G) edge [bend left] node [below] {?} (F);
-	\path[->] (H) edge node [above] {?} (G);
+	\path[->, thick] (A) edge node [above] {?} (B);
+	\path[->, thick] (A) edge node [left ] {?} (F);
+	\path[->, thick] (B) edge node [above] {?} (C);
+	\path[->, thick] (B) edge node [left ] {?} (E);
+	\path[->, thick] (C) edge node [right] {?} (D);
+	\path[->, thick] (D) edge node [above] {?} (B);
+	\path[->, thick] (D) edge node [right] {?} (H);
+	\path[->, thick] (E) edge node [above] {?} (D);
+	\path[->, thick] (E) edge node [left ] {?} (G);
+	\path[->, thick] (F) edge node [above] {?} (E);
+	\path[->, thick] (F) edge [bend left] node [below] {?} (G);
+	\path[->, thick] (G) edge [bend left] node [below] {?} (F);
+	\path[->, thick] (H) edge node [above] {?} (G);
 \end{tikzpicture}
 
 \section{} %2
