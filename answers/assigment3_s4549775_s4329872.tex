@@ -174,6 +174,84 @@ Initial state:
 		\path[->, thick] (G) edge [bend left] node [below] {?} (F);
 		\path[->, thick] (H) edge node [above] {?} (G);
 	\end{tikzpicture}
+
+	\item
+	\begin{tikzpicture}[c/.style={circle, draw}, visited/.style={fill=lightgray}]
+		\node [c, visited] (A) {A/1};
+		\node [c, visited, right=of A] (B) {B/2};
+		\node [c, visited, right=of B] (C) {C/3};
+		\node [c, visited, below=of C] (D) {D/4};
+		\node [c, left =of D] (E) {E/?};
+		\node [c, visited, below=of E] (G) {G/6};
+		\node [c, left =of G] (F) {F/?};
+		\node [c, visited, right=of G] (H) {H/5};
+
+		\path[->, thick] (A) edge node [above] {T} (B);
+		\path[->, thick] (A) edge node [left ] {?} (F);
+		\path[->, thick] (B) edge node [above] {T} (C);
+		\path[->, thick] (B) edge node [left ] {?} (E);
+		\path[->, thick] (C) edge node [right] {T} (D);
+		\path[->, thick] (D) edge node [above] {B} (B);
+		\path[->, thick] (D) edge node [right] {T} (H);
+		\path[->, thick] (E) edge node [above] {?} (D);
+		\path[->, thick] (E) edge node [left ] {?} (G);
+		\path[->, thick] (F) edge node [above] {?} (E);
+		\path[->, thick] (F) edge [bend left] node [below] {?} (G);
+		\path[->, thick] (G) edge [bend left] node [below] {?} (F);
+		\path[->, thick] (H) edge node [above] {T} (G);
+	\end{tikzpicture}
+
+	\item
+	\begin{tikzpicture}[c/.style={circle, draw}, visited/.style={fill=lightgray}]
+		\node [c, visited] (A) {A/1};
+		\node [c, visited, right=of A] (B) {B/2};
+		\node [c, visited, right=of B] (C) {C/3};
+		\node [c, visited, below=of C] (D) {D/4};
+		\node [c, left =of D] (E) {E/?};
+		\node [c, visited, below=of E] (G) {G/6};
+		\node [c, visited, left =of G] (F) {F/7};
+		\node [c, visited, right=of G] (H) {H/5};
+
+		\path[->, thick] (A) edge node [above] {T} (B);
+		\path[->, thick] (A) edge node [left ] {B} (F);
+		\path[->, thick] (B) edge node [above] {T} (C);
+		\path[->, thick] (B) edge node [left ] {?} (E);
+		\path[->, thick] (C) edge node [right] {T} (D);
+		\path[->, thick] (D) edge node [above] {B} (B);
+		\path[->, thick] (D) edge node [right] {T} (H);
+		\path[->, thick] (E) edge node [above] {?} (D);
+		\path[->, thick] (E) edge node [left ] {?} (G);
+		\path[->, thick] (F) edge node [above] {?} (E);
+		\path[->, thick] (F) edge [bend left] node [below] {B} (G);
+		\path[->, thick] (G) edge [bend left] node [below] {T} (F);
+		\path[->, thick] (H) edge node [above] {T} (G);
+	\end{tikzpicture}
+
+	\item
+	\begin{tikzpicture}[c/.style={circle, draw}, visited/.style={fill=lightgray}]
+		\node [c, visited] (A) {A/1};
+		\node [c, visited, right=of A] (B) {B/2};
+		\node [c, visited, right=of B] (C) {C/3};
+		\node [c, visited, below=of C] (D) {D/4};
+		\node [c, visited, left =of D] (E) {E/8};
+		\node [c, visited, below=of E] (G) {G/6};
+		\node [c, visited, left =of G] (F) {F/7};
+		\node [c, visited, right=of G] (H) {H/5};
+
+		\path[->, thick] (A) edge node [above] {T} (B);
+		\path[->, thick] (A) edge node [left ] {F} (F);
+		\path[->, thick] (B) edge node [above] {T} (C);
+		\path[->, thick] (B) edge node [left ] {F} (E);
+		\path[->, thick] (C) edge node [right] {T} (D);
+		\path[->, thick] (D) edge node [above] {B} (B);
+		\path[->, thick] (D) edge node [right] {T} (H);
+		\path[->, thick] (E) edge node [above] {B} (D);
+		\path[->, thick] (E) edge node [left ] {B} (G);
+		\path[->, thick] (F) edge node [above] {T} (E);
+		\path[->, thick] (F) edge [bend left] node [below] {B} (G);
+		\path[->, thick] (G) edge [bend left] node [below] {T} (F);
+		\path[->, thick] (H) edge node [above] {T} (G);
+	\end{tikzpicture}
 \end{enumerate}
 
 \section{} %2
