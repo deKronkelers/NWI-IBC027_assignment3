@@ -288,6 +288,98 @@ Example:
 	\path[->, thick] (g) edge (h);
 \end{tikzpicture}
 
+\begin{itemize}
+	\item
+	\begin{tikzpicture}[baseline=(a.south), c/.style={circle, draw}, v/.style={fill=gray}]
+		\node[c] (a) {};
+		\node[c, right=of a] (b) {};
+		\node[c, below=of a] (c) {};
+		\node[c, below=of c] (d) {};
+		\node[c, right=of d] (e) {};
+		\node[c, below=of d] (f) {};
+		\node[c, below=of e] (g) {};
+		\node[c, v, below=of f] (h) {};
+
+		\path[->, thick] (a) edge (c);
+		\path[->, thick] (b) edge (c);
+		\path[->, thick] (c) edge (d);
+		\path[->, thick] (c) edge (e);
+		\path[->, thick] (d) edge (f);
+		\path[->, thick] (e) edge (g);
+		\path[->, thick] (f) edge (h);
+		\path[->, thick] (g) edge (h);
+	\end{tikzpicture}
+	Semester counter = 1
+
+	\item
+	\begin{tikzpicture}[baseline=(a.south), c/.style={circle, draw}, v/.style={fill=gray}]
+		\node[c] (a) {};
+		\node[c, right=of a] (b) {};
+		\node[c, below=of a] (c) {};
+		\node[c, below=of c] (d) {};
+		\node[c, right=of d] (e) {};
+		\node[c, v, below=of d] (f) {};
+		\node[c, v, below=of e] (g) {};
+		\node[c, v, below=of f] (h) {};
+
+		\path[->, thick] (a) edge (c);
+		\path[->, thick] (b) edge (c);
+		\path[->, thick] (c) edge (d);
+		\path[->, thick] (c) edge (e);
+		\path[->, thick] (d) edge (f);
+		\path[->, thick] (e) edge (g);
+		\path[->, thick] (f) edge (h);
+		\path[->, thick] (g) edge (h);
+	\end{tikzpicture}
+	Semester counter = 2
+
+	\item
+	\begin{tikzpicture}[baseline=(a.south), c/.style={circle, draw}, v/.style={fill=gray}]
+		\node[c] (a) {};
+		\node[c, right=of a] (b) {};
+		\node[c, below=of a] (c) {};
+		\node[c, v, below=of c] (d) {};
+		\node[c, v, right=of d] (e) {};
+		\node[c, v, below=of d] (f) {};
+		\node[c, v, below=of e] (g) {};
+		\node[c, v, below=of f] (h) {};
+
+		\path[->, thick] (a) edge (c);
+		\path[->, thick] (b) edge (c);
+		\path[->, thick] (c) edge (d);
+		\path[->, thick] (c) edge (e);
+		\path[->, thick] (d) edge (f);
+		\path[->, thick] (e) edge (g);
+		\path[->, thick] (f) edge (h);
+		\path[->, thick] (g) edge (h);
+	\end{tikzpicture}
+	Semester counter = 3
+
+	\item
+	\begin{tikzpicture}[baseline=(a.south), c/.style={circle, draw}, v/.style={fill=gray}]
+		\node[c, v] (a) {};
+		\node[c, v, right=of a] (b) {};
+		\node[c, v, below=of a] (c) {};
+		\node[c, v, below=of c] (d) {};
+		\node[c, v, right=of d] (e) {};
+		\node[c, v, below=of d] (f) {};
+		\node[c, v, below=of e] (g) {};
+		\node[c, v, below=of f] (h) {};
+
+		\path[->, thick] (a) edge (c);
+		\path[->, thick] (b) edge (c);
+		\path[->, thick] (c) edge (d);
+		\path[->, thick] (c) edge (e);
+		\path[->, thick] (d) edge (f);
+		\path[->, thick] (e) edge (g);
+		\path[->, thick] (f) edge (h);
+		\path[->, thick] (g) edge (h);
+	\end{tikzpicture}
+	Semester counter = 5
+\end{itemize}
+
+You need at least 5 semesters to take all courses in this example.
+
 \section{} %3
 \section{} %4
 \section{} %5
