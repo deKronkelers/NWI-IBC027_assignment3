@@ -266,6 +266,28 @@ You can find the minimum number of semesters necessary by using a kind of revers
 	\item \label{end} Return the semester counter.
 \end{enumerate}
 
+Example:
+
+\begin{tikzpicture}[c/.style={circle, draw}, v/.style={fill=gray}]
+	\node[c] (a) {};
+	\node[c, right=of a] (b) {};
+	\node[c, below=of a] (c) {};
+	\node[c, below=of c] (d) {};
+	\node[c, right=of d] (e) {};
+	\node[c, below=of d] (f) {};
+	\node[c, below=of e] (g) {};
+	\node[c, below=of f] (h) {};
+
+	\path[->, thick] (a) edge (c);
+	\path[->, thick] (b) edge (c);
+	\path[->, thick] (c) edge (d);
+	\path[->, thick] (c) edge (e);
+	\path[->, thick] (d) edge (f);
+	\path[->, thick] (e) edge (g);
+	\path[->, thick] (f) edge (h);
+	\path[->, thick] (g) edge (h);
+\end{tikzpicture}
+
 \section{} %3
 \section{} %4
 \section{} %5
