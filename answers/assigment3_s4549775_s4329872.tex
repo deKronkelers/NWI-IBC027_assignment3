@@ -260,7 +260,7 @@ You can find the minimum number of semesters necessary by using a kind of revers
 \begin{enumerate}
 	\item Initialize the semester counter to 1.
 	\item Mark nodes with out-degree 0 (the final courses) as visited.
-	\item \label{loop} Follow the ingoing edges of the last visited nodes and mark their origin nodes as visited.
+	\item \label{loop} Follow the ingoing edges of the last visited nodes and mark their origin nodes as visited when all of their outgoing edges connect to visited nodes.
 	\item Increment the semester counter.
 	\item If any of these nodes have an in-degree $> 0$, go to \ref{loop}, else go to \ref{end}
 	\item \label{end} Return the semester counter.
