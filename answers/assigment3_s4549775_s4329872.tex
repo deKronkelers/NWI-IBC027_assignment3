@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 
 \usepackage[top=5em, bottom=5em, left=5em, right=5em]{geometry}
+\usepackage{listings}
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 
@@ -387,6 +388,25 @@ You need at least 5 semesters to take all courses in this example.
 
 \section{} %3
 \section{} %4
+Given here is an implementation of an algorithm to check for a universal sink in $O(n)$ time written in Python:
+
+\lstinputlisting[language=Python]{code/universal_sink.py}
+
+Usage example:
+
+\begin{lstlisting}[language=Python]
+v = matrix("""
+0 1 0 0;
+0 0 0 0;
+0 1 0 0;
+1 1 1 0
+""")
+print(contains_universal_sink(v)) # True
+
+v[1, 1] = 1
+print(contains_universal_sink(v)) # False
+\end{lstlisting}
+
 \section{} %5
 \section{} %6
 
