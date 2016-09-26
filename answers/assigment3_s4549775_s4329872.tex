@@ -438,7 +438,7 @@ else
 \end{lstlisting}
 (https://en.wikipedia.org/wiki/Topological\_sorting\#Kahn.27s\_algorithm)
 
-$S$ can be constructed in $O(|V| + |E|)$ by making a copy $S$ of $V$ (takes $O(|V|)$) and iterating over $E$, removing every $s \in S$ for which $(v, s) \in E, v\in V$ (takes $O(|E|)$).
+$S$ can be constructed in $O(|V| + |E|)$ by making a copy $S$ of $V$ (takes $O(|V|)$) and iterating over $E$, removing every $s \in S$ for which $(v, s) \in E, v\in V$ (takes $O(|E|)$). (This assumes $O(1)$ for insertion and deletion on the set which can be achieved by using a hash set.)
 
 If we do this and then use it to run Kahn's algorithm we end up visiting each vertex, and each edge twice. $O(2(|V| + |E|)) = O(|V| + |E|)$.
 
