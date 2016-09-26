@@ -408,6 +408,14 @@ print(contains_universal_sink(v)) # False
 \end{lstlisting}
 
 \section{} %5
+Given a graph $G = (V, E)$ we want to check whether there is a vertex $s \in V$ from which all other vertices are reachable.
+
+First we find the strongly connected components using, for exmaple, Kosaraju's algorithm, or Tarjan's algorithm.
+
+If there is exactly one strongly connected component with no incoming edges, then all of its vertices can reach any other vertex. So there exists an $s$.
+
+If there is more than one strongly connected component with no incoming edges, then there can be no $s$.
+
 \section{} %6
 
 \end{document}
