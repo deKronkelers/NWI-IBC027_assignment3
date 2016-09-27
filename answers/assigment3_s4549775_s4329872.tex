@@ -418,7 +418,7 @@ So the if-statement is true thus the row is incremented.
 Because the first node was not the universal sink, we assume that the second node has an input from the first node.
 If we encounter another 1 in the column of node 2, this node cannot be the universal sink either so we move to the next column thus to the next possible node.
 
-This algorithm assumes that there exists a universal sink in the graph and then searches for the node which has the highest chance of being an universal sink.
+This algorithm assumes that there exists a universal sink in the graph and then searches for the node which has the highest chance of being a universal sink.
 If the returned node is not a universal sink, then no other node is, thus the algorithm returns false.
 
 Because at each iteration of the while-loop, we either increment the row or the column, until one of them reaches n. The while-loop is executed at most $2n$ times.
