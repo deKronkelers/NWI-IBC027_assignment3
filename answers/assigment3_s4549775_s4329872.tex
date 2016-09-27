@@ -386,6 +386,8 @@ Example:
 
 You need at least 5 semesters to take all courses in this example.
 
+If traversing directed edges backwards is disallowed you could first take the transpose of the graph (invert all edges). This is a $O(|E|)$ operation.
+
 \section{} %3
 We came up with an algorithm to answer the query "Is u the parent of v?" in constant time: You can traverse the tree in any order in $O(n)$ and build a hash table from every child to its parent (insertion is $O(1)$). Since lookup in a hash table is also $O(1)$ you can answer the query in $O(1)$ after preprocessing.
 
