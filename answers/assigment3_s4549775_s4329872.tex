@@ -387,6 +387,10 @@ Example:
 You need at least 5 semesters to take all courses in this example.
 
 \section{} %3
+We came up with an algorithm to answer the query "Is u the parent of v?" in constant time: You can traverse the tree in any order in $O(n)$ and build a hash table from every child to its parent (insertion is $O(1)$). Since lookup in a hash table is also $O(1)$ you can answer the query in $O(1)$ after preprocessing.
+
+We did not know how to generalize this approach to the more general query "Is u an ancestor of v?" while retaining constant time complexity.
+
 \section{} %4
 Given here is an implementation of an algorithm to check for a universal sink in $O(n)$ time written in Python:
 
