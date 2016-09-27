@@ -410,7 +410,7 @@ print(contains_universal_sink(v)) # False
 This algorithm uses the adjacency matrix of a given graph to check if there exists a universal sink in the graph.
 It first checks the values in the column for the first node.
 If the column consists of only zeros, this node is the only one possible which could be a universal sink.
-So the algorithm returns the node index and checks with the function $is_sink()$ if this node is indeed a universal sink.
+So the algorithm finds its node index and checks with the function $is\_sink()$ if this node is indeed a universal sink.
 If this node is not a universal sink, there is none in the graph.
 
 If the first column contains a 1, it means that the out-degree of that node is not 0, so this node cannot be a universal sink.
@@ -419,10 +419,10 @@ Because the first node was not the universal sink, we assume that the second nod
 If we encounter another 1 in the column of node 2, this node cannot be the universal sink either so we move to the next column thus to the next possible node.
 
 This algorithm assumes that there exists a universal sink in the graph and then searches for the node which has the highest chance of being a universal sink.
-If the returned node is not a universal sink, then no other node is, thus the algorithm returns false.
+If the chosen node is not a universal sink, then no other node is, thus the algorithm returns false.
 
 Because at each iteration of the while-loop, we either increment the row or the column, until one of them reaches n. The while-loop is executed at most $2n$ times.
-After the loop the $is_sink()$-function is executed once which takes another $n$ steps.
+After the loop the $is\_sink()$-function is executed once which takes another $n$ steps.
 Thus this algorithm takes in total $3n$ time, so it has a time complexity of $O(n)$.
 
 \section{} %5
