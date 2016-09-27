@@ -410,8 +410,8 @@ print(contains_universal_sink(v)) # False
 This algorithm uses the adjacency matrix of a given graph to check if there exists a universal sink in the graph.
 It first checks the values in the column for the first node.
 If the column consists of only zeros, this node is the only one possible which could be a universal sink.
-So the algorithm returns the node index and checks with the function $is_sink()$ if this node is indeed an universal sink.
-If this node is not an universal sink, there is none in the graph.
+So the algorithm returns the node index and checks with the function $is_sink()$ if this node is indeed a universal sink.
+If this node is not a universal sink, there is none in the graph.
 
 If the first column contains a 1, it means that the out-degree of that node is not 0, so this node cannot be a universal sink.
 So the if-statement is true thus the row is incremented.
